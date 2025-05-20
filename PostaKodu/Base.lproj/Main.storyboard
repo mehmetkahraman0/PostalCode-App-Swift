@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zKq-cY-vPg">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PostaKodu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="S7h-RD-ZXl">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="ct7-Fm-GQe">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="BYZ-38-t0r" id="7xs-hr-ts8"/>
+                                    </connections>
+                                </searchBar>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S7h-RD-ZXl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KIz-L9-WPj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S7h-RD-ZXl" secondAttribute="trailing" id="Xbb-ar-1c7"/>
+                            <constraint firstItem="S7h-RD-ZXl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qrA-kf-S3k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S7h-RD-ZXl" secondAttribute="bottom" id="urR-Ey-Axo"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="fCi-4e-MHM"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cityTableView" destination="S7h-RD-ZXl" id="o2S-eq-jGF"/>
+                        <outlet property="searchBar" destination="ct7-Fm-GQe" id="kAE-K3-Oqa"/>
+                        <segue destination="7VT-cV-FUH" kind="show" identifier="toDistrictPage" id="MVS-zc-r2w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="3.5211267605633805"/>
+        </scene>
+        <!--District View Controller-->
+        <scene sceneID="sQp-hA-1uB">
+            <objects>
+                <viewController id="7VT-cV-FUH" customClass="DistrictViewController" customModule="PostaKodu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DMa-eb-T1A">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FdY-Y1-m67">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="92K-b5-yj5">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="7VT-cV-FUH" id="3bX-CL-MUg"/>
+                                    </connections>
+                                </searchBar>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vIZ-Wk-ZWp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FdY-Y1-m67" firstAttribute="top" secondItem="vIZ-Wk-ZWp" secondAttribute="top" id="1fR-wj-Wxl"/>
+                            <constraint firstItem="vIZ-Wk-ZWp" firstAttribute="trailing" secondItem="FdY-Y1-m67" secondAttribute="trailing" id="DwI-aS-P5v"/>
+                            <constraint firstItem="FdY-Y1-m67" firstAttribute="leading" secondItem="vIZ-Wk-ZWp" secondAttribute="leading" id="LHX-Xh-8gd"/>
+                            <constraint firstItem="vIZ-Wk-ZWp" firstAttribute="bottom" secondItem="FdY-Y1-m67" secondAttribute="bottom" id="fXT-SP-zFe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="L8M-ls-lgK"/>
+                    <connections>
+                        <outlet property="distrcitTableView" destination="FdY-Y1-m67" id="5X4-8c-iwz"/>
+                        <outlet property="searchBar" destination="92K-b5-yj5" id="syA-d0-EzO"/>
+                        <segue destination="DKV-Jj-trg" kind="show" identifier="toDetailsPage" id="Amr-cx-o2o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I73-yu-JGK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1970.2290076335878" y="3.5211267605633805"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="MuP-hb-gQH">
+            <objects>
+                <viewController id="DKV-Jj-trg" customClass="DetailsViewController" customModule="PostaKodu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="me9-WD-S9G">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sehir : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcc-uK-ff9">
+                                <rect key="frame" x="16" y="276" width="361" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="İlçe : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZr-Re-jgt">
+                                <rect key="frame" x="16" y="310" width="361" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nüfus : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="le9-ku-9bq">
+                                <rect key="frame" x="16" y="344" width="361" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Posta Kodu : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaX-Zb-wmb">
+                                <rect key="frame" x="16" y="432" width="361" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yüz Ölçümü : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvU-WH-Wi9">
+                                <rect key="frame" x="16" y="378" width="361" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dB4-zS-Wi6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uCb-Dg-Y74"/>
+                    <connections>
+                        <outlet property="areaLabel" destination="hvU-WH-Wi9" id="ql9-e2-Whq"/>
+                        <outlet property="districtLabel" destination="sZr-Re-jgt" id="Ajj-FN-KBf"/>
+                        <outlet property="nameLabel" destination="xcc-uK-ff9" id="KTv-Sj-pvQ"/>
+                        <outlet property="populationLabel" destination="le9-ku-9bq" id="p3G-1Y-T5e"/>
+                        <outlet property="postalcodeLabel" destination="zaX-Zb-wmb" id="82c-hm-Jf7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sxJ-gW-d8W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2939.6946564885493" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aeQ-dd-lbS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zKq-cY-vPg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rmw-IU-TDx">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fhg-tH-GyH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1GR-2e-6Wx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.95419847328243" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
